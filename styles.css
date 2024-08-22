@@ -8,10 +8,10 @@ body {
 
 header {
     background-color: #7a05a8;
-    color: #fff;
+    color: #044b7d;
     padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 4px 8px rgb(254, 254, 254);
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
 nav ul {
@@ -28,7 +28,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #022cff;
     text-decoration: none;
     padding: 1rem;
     display: block;
@@ -58,5 +58,5 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -4px 8px rgb(255, 255, 255);
+    box-shadow: 0 -4px 8px rgb(0, 0, 0);
 }
