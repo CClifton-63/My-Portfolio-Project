@@ -43,7 +43,7 @@ nav ul li a:hover {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-    .logo-container {
+    .logo-container 
         width: 300px;
         height: 90px;
     }
@@ -84,11 +84,10 @@ nav ul li a:hover {
         width: 100%;
         height: auto;
         margin: 10px 0;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    .logo-container {
+    .logo-container 
         width: 250px;
         height: 75px;
     }
@@ -107,7 +106,6 @@ nav ul li a:hover {
         font-size: 12px;
         top: 40px;
     }
-}
 
 section {
     padding: 2rem;
