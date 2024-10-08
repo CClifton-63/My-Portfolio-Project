@@ -9,20 +9,26 @@
             font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff7f50, #ff4500);
-            color: #ffffff;
             background-image: url('https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
         }
 
         header {
-            background-color: #00b3ff;
+            background-color: rgba(0, 179, 255, 0.8);
             color: #ffffff;
-            padding: 1.5rem 0;
+            padding: 1rem 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px 0;
         }
 
         nav ul {
@@ -30,7 +36,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            background-color: #000000;
+            background-color: rgba(0, 0, 0, 0.7);
             margin: 0;
         }
 
@@ -52,10 +58,14 @@
             border-radius: 5px;
         }
 
+        main {
+            padding-bottom: 60px; /* Add space for footer */
+        }
+
         section {
             padding: 2rem;
             margin: 2rem auto;
-            background-color: #333333;
+            background-color: rgba(51, 51, 51, 0.8);
             border-radius: 10px;
             max-width: 800px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -64,18 +74,40 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background-color: #00b3ff;
+            background-color: rgba(0, 179, 255, 0.8);
             color: #ffffff;
             position: fixed;
             width: 100%;
             bottom: 0;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
         }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            section {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Chad's Web  Portfolio Project</h1>
+        <div class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 100">
+                <rect width="600" height="100" fill="#00b3ff" />
+                <circle cx="50" cy="50" r="40" fill="none" stroke="#FFFFFF" stroke-width="2" />
+                <path d="M30,50 Q50,20 70,50 T110,50" fill="none" stroke="#FFFFFF" stroke-width="2" />
+                <text x="130" y="65" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF">CHAD'S WEB PORTFOLIO PROJECT</text>
+            </svg>
+        </div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -86,27 +118,28 @@
         </nav>
     </header>
 
- <section id="about">
-        <h2>About</h2>
-        <div class="about-item">
-            <h3>My career goals & objectives</h3>
-            <p>Hello! Welcome to my portfolio project,</p>
-            <p>My name is Chad Clifton & this portfolio outlines & tracks my education learning journey in regard to the Certificate III Information Technology course I am enrolled in currently, I would also like to explain my career goals, which are to acquire Information & Technology qualifications for short-term and long-term objectives.</p>
-            <p>My aim is to secure an entry-level IT role such as a Support Technician or a similar position to begin with, then building up my knowledge over time I want to be able to focus on my main goal which is becoming a Cloud Support Engineer.</p>
-            <p> I have also started my AWS Certified Cloud Practitioner training by enrolling in AWS Academy | AWS Academy Cloud Foundations! My learning journey begins now, with an intended & much anticipated goal of completion in December 2024.</p>
-        </div>
-    </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-item">
-            <h3>ICT30120 - Certificate III in Information and Communications Technology</h3>
-            <p>Course units completed so far with grades & completion status.</p>
-        </div>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <div class="about-item">
+                <h3>My career goals & objectives</h3>
+                <p>Hello! Welcome to my portfolio project,</p>
+                <p>My name is Chad Clifton & this portfolio outlines & tracks my education learning journey in regard to the Certificate III Information Technology course I am enrolled in currently, I would also like to explain my career goals, which are to acquire Information & Technology qualifications for short-term and long-term objectives.</p>
+                <p>My aim is to secure an entry-level IT role such as a Support Technician or a similar position to begin with, then building up my knowledge over time I want to be able to focus on my main goal which is becoming a Cloud Support Engineer.</p>
+                <p> I have also started my AWS Certified Cloud Practitioner training by enrolling in AWS Academy | AWS Academy Cloud Foundations! My learning journey begins now, with an intended & much anticipated goal of completion in December 2024.</p>
+            </div>
+        </section>
+        
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <h3>ICT30120 - Certificate III in Information and Communications Technology</h3>
+                <p>Course units completed so far with grades & completion status.</p>
+            </div>
+        </section>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
+        <section id="achievements">
+            <h2>Achievements</h2>
         <div class="achievements-item">
             <ul>
                 <li>BSBCRT301: Develop and extend critical and creative thinking skills - Grade: Satisfactory</li>
@@ -126,15 +159,16 @@
                 <li>ICTICT309: Create ICT user documentation 2024 - Ongoing</li>
             </ul>
         </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-item">
-            <p>Connect with me on <a href="https://www.linkedin.com/in/chadc1137/" target="_blank" style="color: cyan;">LinkedIn</a>.</p>
-            <br>
-        </div>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-item">
+                <p>Connect with me on <a href="https://www.linkedin.com/in/chadc1137/" target="_blank" style="color: cyan;">LinkedIn</a>.</p>
+                <br>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>My Portfolio - Property of Chad Clifton - Copyright © 2024 - Background image url: https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg</p>
