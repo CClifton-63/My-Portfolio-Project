@@ -41,6 +41,74 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .logo-container {
+        width: 300px;
+        height: 90px;
+    }
+
+    .plate {
+        width: 280px;
+        height: 75px;
+    }
+
+    .main-text {
+        font-size: 22px;
+        top: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        top: 50px;
+    }
+
+    .noodle {
+        width: 300px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-container {
+        width: 250px;
+        height: 75px;
+    }
+
+    .plate {
+        width: 230px;
+        height: 60px;
+    }
+
+    .main-text {
+        font-size: 18px;
+        top: 15px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        top: 40px;
+    }
+}
+
 section {
     padding: 2rem;
     margin: 2rem auto;
