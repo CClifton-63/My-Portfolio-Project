@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f3f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#083358;stop-opacity:1" />
+    </linearGradient>
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="100" fill="url(#bgGrad)" />
+  
+  <!-- Animated circuit lines -->
+  <g stroke="#00f1ff" stroke-width="1" fill="none">
+    <path d="M0,20 H400">
+      <animate attributeName="d" values="M0,20 H0; M0,20 H400; M0,20 H0" dur="3s" repeatCount="indefinite" />
+    </path>
+    <path d="M0,80 H400">
+      <animate attributeName="d" values="M400,80 H400; M400,80 H0; M400,80 H400" dur="3s" repeatCount="indefinite" />
+    </path>
+    <path d="M20,0 V100">
+      <animate attributeName="d" values="M20,100 V100; M20,100 V0; M20,100 V100" dur="2s" repeatCount="indefinite" />
+    </path>
+    <path d="M380,0 V100">
+      <animate attributeName="d" values="M380,0 V0; M380,0 V100; M380,0 V0" dur="2s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Main text -->
+  <text x="200" y="55" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff" filter="url(#neonGlow)">
+    CHAD'S WEB PORTFOLIO
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+  </text>
+  
+  <!-- Animated brackets -->
+  <g fill="none" stroke="#00f1ff" stroke-width="3" filter="url(#neonGlow)">
+    <path d="M160,30 H140 V70 H160">
+      <animate attributeName="d" values="M160,30 H160 V70 H160; M160,30 H140 V70 H160; M160,30 H160 V70 H160" dur="1.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M240,30 H260 V70 H240">
+      <animate attributeName="d" values="M240,30 H240 V70 H240; M240,30 H260 V70 H240; M240,30 H240 V70 H240" dur="1.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Pulsing dots -->
+  <g fill="#00f1ff">
+    <circle cx="20" cy="20" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" cy="80" r="3">
+      <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" begin="0.5s" />
+    </circle>
+  </g>
+</svg>
