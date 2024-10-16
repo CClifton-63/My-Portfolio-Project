@@ -1,7 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (head content remains the same) ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chad's Portfolio</title>
+  <style>
+      body {
+          font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-image: url('https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-attachment: fixed;
+          color: #ffffff;
+      }
+
+      header {
+          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+          padding: 1rem 0;
+          text-align: center;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .logo-container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 10px 0;
+      }
+
+      .logo-container svg {
+          width: 100%;
+          height: auto;
+          max-height: 150px;
+      }
+
+      nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          background-color: rgba(0, 0, 0, 0.7);
+          margin: 0;
+      }
+
+      nav ul li {
+          margin: 0 1rem;
+      }
+
+      nav ul li a {
+          color: #00ffff;
+          text-decoration: none;
+          padding: 1rem;
+          display: block;
+          transition: background-color 0.3s, color 0.3s;
+      }
+
+      nav ul li a:hover {
+          background-color: #ff0b81;
+          color: #ffffff;
+          border-radius: 5px;
+      }
+
+      main {
+          padding: 2rem;
+          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+          margin: 2rem auto;
+          max-width: 800px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      }
+
+      section {
+          margin-bottom: 2rem;
+      }
+
+      h2 {
+          color: #ffffff;
+          border-bottom: 2px solid #ffffff;
+          padding-bottom: 0.5rem;
+      }
+
+      footer {
+          text-align: center;
+          padding: 1rem 0;
+          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+          color: #ffffff;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 768px) {
+          nav ul {
+              flex-direction: column;
+          }
+
+          nav ul li {
+              margin: 0.5rem 0;
+          }
+
+          main {
+              margin: 1rem;
+              padding: 1rem;
+          }
+      }
+  </style>
 </head>
 <body>
     <header>
