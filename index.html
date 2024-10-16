@@ -17,11 +17,11 @@
             color: #ffffff;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure the body takes up the full height */
+            min-height: 100vh;
         }
 
         header {
-            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            background-color: rgba(0, 70, 100, 0.8);
             padding: 1rem 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -40,15 +40,15 @@
         }
 
         nav {
-            overflow: hidden; /* Prevent overflow of the nav items */
+            overflow: hidden;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            display: flex; /* Flex layout for horizontal alignment */
+            display: flex;
             justify-content: center;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.8);
             margin: 0;
         }
 
@@ -71,13 +71,14 @@
         }
 
         main {
-            flex: 1; /* Allow main to grow and fill available space */
+            flex: 1;
             padding: 2rem;
-            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            background-color: rgba(0, 70, 100, 0.8);
             margin: 2rem auto;
             max-width: 800px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            margin-bottom: 60px; /* Space for footer */
         }
 
         section {
@@ -92,28 +93,30 @@
 
         footer {
             text-align: center;
-            padding: 0.5rem 0; /* Smaller footer */
-            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            padding: 0.5rem 0;
+            background-color: rgba(0, 70, 100, 0.8);
             color: #ffffff;
-            position: fixed; /* Fix footer at the bottom */
+            position: fixed;
             width: 100%;
             bottom: 0;
+            left: 0;
             box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
         }
 
         @media (max-width: 768px) {
             nav ul {
-                flex-direction: column; /* Stack vertically on smaller screens */
-                align-items: center; /* Center items vertically */
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             nav ul li {
-                margin: 0.5rem 0; /* Adjust margins for vertical layout */
+                margin: 0.25rem 0.5rem;
             }
 
             main {
                 margin: 1rem;
                 padding: 1rem;
+                margin-bottom: 60px; /* Space for footer on mobile */
             }
         }
     </style>
