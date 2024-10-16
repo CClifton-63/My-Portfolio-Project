@@ -92,11 +92,30 @@
             margin-bottom: 2rem;
         }
 
-        h2 {
-            color: #ffffff;
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 0.5rem;
-        }
+        /* Add these CSS rules to your existing style section */
+
+h2 {
+    font-size: 2em;  /* Standardized size for all h2 headings */
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5em;  /* Standardized size for all h3 headings */
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Update the achievements heading specifically to maintain icon alignment */
+#achievements h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    font-size: 2em;  /* Match other h2 headings */
+}
 
         footer {
             background-color: rgba(0, 70, 100, 0.8);
@@ -120,26 +139,81 @@
             margin: 0;
             padding: 0;
         }
+        
+        #achievements {
+    padding: 20px;
+    margin: 20px 0;
+}
 
-        @media (max-width: 768px) {
-            nav ul li a {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
+#achievements h2 {
+    display: flex;
+    align-items: center;  /* Vertically centers the icon with text */
+    margin-bottom: 20px;
+    gap: 20px;  /* Increased space between icon and text for larger icon */
+    font-size: 2.5em;  /* Increased text size to balance with larger icon */
+}
 
-            main {
-                margin: 1rem;
-                padding: 1rem;
-                margin-bottom: 80px;
-            }
+#achievements .icon {
+    width: 150px;  /* Set to your specified size */
+    height: 150px;
+    object-fit: contain;  /* Ensures icon maintains aspect ratio */
+}
+
+.achievements-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.achievements-item li {
+    padding: 10px 0;
+    line-height: 1.5;
+    border-bottom: 1px solid #eee;
+}
+
+.achievements-item li:last-child {
+    border-bottom: none;
+}
+
+.achievements-item li + li {
+    margin-top: 10px;
+}
+
+        .icon {
+    width: 150px; /* Adjust the size as needed */
+    height: 150;
+    vertical-align: middle;
+    margin-right: 8px; /* Adjust the spacing as needed */
+    
         }
 
-        @media (max-width: 480px) {
-            nav ul li a {
-                padding: 0.5rem 0.3rem;
-                font-size: 0.8rem;
-            }
+        .linkedin-link {
+        color: cyan; /* Keep text color */
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center align items vertically */
+
         }
+
+    .linkedin-icon {
+        width: 150px; /* Set a larger icon size */
+        height: 150px; /* Maintain aspect ratio */
+        margin-right: 10px; /* Space between icon and text */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .linkedin-icon {
+            width: 40px; /* Smaller icon for medium screens */
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .linkedin-icon {
+            width: 35px; /* Even smaller icon for small screens */
+            height: 35px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -222,9 +296,9 @@
             <h2>About</h2>
             <div>
                 <h3>Chad Clifton</h3>
-                <p>As an aspiring IT professional, my goal is to continue growing my technical abilities & expand my knowledge base in the fast-paced world of Information Technology. 
-                I am currently working on my ICT30120 - Certificate III in Information and Communications Technology qualification, while also working part-time to gain practical, hands-on experience.</p>
-                <p>I have an immense passion for networking, IT security, and software development, and I am excited to continue to develop my IT skills, knowledge & experience in the field while continuing to develop my career path to become an IT Specialist.</p>
+                <p>Hello! Welcome to my portfolio project,</p>
+                <p>My name is Chad Clifton & this portfolio outlines & tracks my education learning journey in regard to the Certificate III Information Technology course I am currently undertaking.</p>
+                <p>My aims and objectives are to further develop my IT skills, knowledge & experience in the field while continuing to develop my career path to become an IT Specialist.</p>
                 <p>My current education learning journey begins now, with an intended & much anticipated goal of completion in December 2024.</p>
             </div>
         </section>
@@ -238,35 +312,34 @@
         </section>
 
         <section id="achievements">
-            <h2>Achievements</h2>
+            <h2><img src="Media\Images\free-cup-trophy-icon.png" alt="Achievements Icon" class="icon"> Achievements</h2>
             <div class="achievements-item">
                 <ul>
                     <li>BSBCRT301: Develop and extend critical and creative thinking skills - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>BSBXCS303: Securely manage personally identifiable information and workplace information - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>BSBXTW301: Work in a team - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>ICTICT313: Identify IP, ethics and privacy policies in ICT environments - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>ICTICT312: Use advanced features of applications - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>ICTPRG302: Apply introductory programming techniques - Ongoing</li>
-                    <br>
                     <li>ICTWEB431: Create and style simple markup language documents - Grade: Pass/Satisfactory</li>
-                    <br>
                     <li>ICTICT309: Create ICT user documentation - Ongoing</li>
                 </ul>
             </div>
         </section>
+        
 
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-item">
-                <p>Connect with me on <a href="https://www.linkedin.com/in/chadc1137/" target="_blank" style="color: cyan;">LinkedIn</a>.</p>
+                <a href="https://www.linkedin.com/in/chadc1137/" target="_blank" class="linkedin-link">
+                    <img src="Media\Images\LinkedIn Icon.png" alt="LinkedIn Icon" class="linkedin-icon">
+                    Connect with me on LinkedIn.
+                </a>
                 <br>
             </div>
         </section>
+        
+
     </main>
 
     <footer>
