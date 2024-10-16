@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chad's Portfolio</title>
-  <style>
-      body {
-          font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          margin: 0;
-          padding: 0;
-          background-image: url('https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg');
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-attachment: fixed;
-          color: #ffffff;
-      }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chad's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body takes up the full height */
+        }
 
-      header {
-          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
-          padding: 1rem 0;
-          text-align: center;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      }
+        header {
+            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
 
-      .logo-container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 10px 0;
-      }
+        .logo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
 
-      .logo-container svg {
-          width: 100%;
-          height: auto;
-          max-height: 150px;
-      }
+        .logo-container svg {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+        }
 
-      nav ul {
-          list-style: none;
-          padding: 0;
-          display: flex;
-          justify-content: center;
-          background-color: rgba(0, 0, 0, 0.7);
-          margin: 0;
-      }
+        nav {
+            overflow: hidden; /* Prevent overflow of the nav items */
+        }
 
-      nav ul li {
-          margin: 0 1rem;
-      }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex; /* Flex layout for horizontal alignment */
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0;
+        }
 
-      nav ul li a {
-          color: #00ffff;
-          text-decoration: none;
-          padding: 1rem;
-          display: block;
-          transition: background-color 0.3s, color 0.3s;
-      }
+        nav ul li {
+            margin: 0 1rem;
+        }
 
-      nav ul li a:hover {
-          background-color: #ff0b81;
-          color: #ffffff;
-          border-radius: 5px;
-      }
+        nav ul li a {
+            color: #00ffff;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-      main {
-          padding: 2rem;
-          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
-          margin: 2rem auto;
-          max-width: 800px;
-          border-radius: 10px;
-          box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-      }
+        nav ul li a:hover {
+            background-color: #ff0b81;
+            color: #ffffff;
+            border-radius: 5px;
+        }
 
-      section {
-          margin-bottom: 2rem;
-      }
+        main {
+            flex: 1; /* Allow main to grow and fill available space */
+            padding: 2rem;
+            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+        }
 
-      h2 {
-          color: #ffffff;
-          border-bottom: 2px solid #ffffff;
-          padding-bottom: 0.5rem;
-      }
+        section {
+            margin-bottom: 2rem;
+        }
 
-      footer {
-          text-align: center;
-          padding: 1rem 0;
-          background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
-          color: #ffffff;
-          position: fixed;
-          width: 100%;
-          bottom: 0;
-          box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-      }
+        h2 {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 0.5rem;
+        }
 
-      @media (max-width: 768px) {
-          nav ul {
-              flex-direction: column;
-          }
+        footer {
+            text-align: center;
+            padding: 0.5rem 0; /* Smaller footer */
+            background-color: rgba(0, 90, 128, 0.7); /* Darker blue, more transparent */
+            color: #ffffff;
+            position: fixed; /* Fix footer at the bottom */
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
 
-          nav ul li {
-              margin: 0.5rem 0;
-          }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column; /* Stack vertically on smaller screens */
+                align-items: center; /* Center items vertically */
+            }
 
-          main {
-              margin: 1rem;
-              padding: 1rem;
-          }
-      }
-  </style>
+            nav ul li {
+                margin: 0.5rem 0; /* Adjust margins for vertical layout */
+            }
+
+            main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100">
                 <defs>
-                  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#001f3f;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#083358;stop-opacity:1" />
-                  </linearGradient>
-                  <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                    <feMerge>
-                      <feMergeNode in="coloredBlur"/>
-                      <feMergeNode in="SourceGraphic"/>
-                    </feMerge>
-                  </filter>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#001f3f;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#083358;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
                 </defs>
                 
                 <!-- Background -->
@@ -132,46 +141,46 @@
                 
                 <!-- Animated circuit lines -->
                 <g stroke="#00f1ff" stroke-width="1" fill="none">
-                  <path d="M0,20 H400">
-                    <animate attributeName="d" values="M0,20 H0; M0,20 H400; M0,20 H0" dur="3s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M0,80 H400">
-                    <animate attributeName="d" values="M400,80 H400; M400,80 H0; M400,80 H400" dur="3s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M20,0 V100">
-                    <animate attributeName="d" values="M20,100 V100; M20,100 V0; M20,100 V100" dur="2s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M380,0 V100">
-                    <animate attributeName="d" values="M380,0 V0; M380,0 V100; M380,0 V0" dur="2s" repeatCount="indefinite" />
-                  </path>
+                    <path d="M0,20 H400">
+                        <animate attributeName="d" values="M0,20 H0; M0,20 H400; M0,20 H0" dur="3s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M0,80 H400">
+                        <animate attributeName="d" values="M400,80 H400; M400,80 H0; M400,80 H400" dur="3s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M20,0 V100">
+                        <animate attributeName="d" values="M20,100 V100; M20,100 V0; M20,100 V100" dur="2s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M380,0 V100">
+                        <animate attributeName="d" values="M380,0 V0; M380,0 V100; M380,0 V0" dur="2s" repeatCount="indefinite" />
+                    </path>
                 </g>
                 
                 <!-- Main text -->
                 <text x="200" y="55" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff" filter="url(#neonGlow)">
-                  CHAD'S WEB PORTFOLIO
-                  <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+                    CHAD'S WEB PORTFOLIO
+                    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
                 </text>
                 
                 <!-- Animated brackets (moved to the outside) -->
                 <g fill="none" stroke="#00f1ff" stroke-width="3" filter="url(#neonGlow)">
-                  <path d="M80,30 H60 V70 H80">
-                    <animate attributeName="d" values="M80,30 H80 V70 H80; M80,30 H60 V70 H80; M80,30 H80 V70 H80" dur="1.5s" repeatCount="indefinite" />
-                  </path>
-                  <path d="M320,30 H340 V70 H320">
-                    <animate attributeName="d" values="M320,30 H320 V70 H320; M320,30 H340 V70 H320; M320,30 H320 V70 H320" dur="1.5s" repeatCount="indefinite" />
-                  </path>
+                    <path d="M70,30 H50 V70 H70">
+                        <animate attributeName="d" values="M70,30 H70 V70 H70; M70,30 H50 V70 H70; M70,30 H70 V70 H70" dur="1.5s" repeatCount="indefinite" />
+                    </path>
+                    <path d="M330,30 H350 V70 H330">
+                        <animate attributeName="d" values="M330,30 H330 V70 H330; M330,30 H350 V70 H330; M330,30 H330 V70 H330" dur="1.5s" repeatCount="indefinite" />
+                    </path>
                 </g>
                 
                 <!-- Pulsing dots -->
                 <g fill="#00f1ff">
-                  <circle cx="20" cy="20" r="3">
-                    <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" />
-                  </circle>
-                  <circle cx="380" cy="80" r="3">
-                    <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" begin="0.5s" />
-                  </circle>
+                    <circle cx="20" cy="20" r="3">
+                        <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="380" cy="80" r="3">
+                        <animate attributeName="r" values="2;4;2" dur="1s" repeatCount="indefinite" begin="0.5s" />
+                    </circle>
                 </g>
-              </svg>
+            </svg>
         </div>
         <nav>
             <ul>
@@ -189,10 +198,9 @@
             <div class="about-item">
                 <h3>My career goals & objectives</h3>
                 <p>Hello! Welcome to my portfolio project,</p>
-                <p>My name is Chad Clifton & this portfolio outlines & tracks my education learning journey in regard to the Certificate III Information Technology course I am enrolled in currently at Sunrasyia Institute of Tafe, Mildura, Victoria.</p>
-                <p>I would also like to explain my career goals, which are to acquire Information & Technology qualifications for short-term and long-term objectives.</p>
-                <p>My aim is to secure an entry-level IT role such as a Support Technician or a similar position to begin with, then building up my knowledge over time I want to be able to focus on my main goal which is becoming a Cloud Support Engineer.</p>
-                <p> I have also started my AWS Certified Cloud Practitioner training by enrolling in AWS Academy | AWS Academy Cloud Foundations! My learning journey begins now, with an intended & much anticipated goal of completion in December 2024.</p>
+                <p>My name is Chad Clifton & this portfolio outlines & tracks my education learning journey in regard to the Certificate III Information Technology course I am currently undertaking.</p>
+                <p>My aims and objectives are to further develop my IT skills, knowledge & experience in the field while continuing to develop my career path to become an IT Specialist.</p>
+                <p>My current education learning journey begins now, with an intended & much anticipated goal of completion in December 2024.</p>
             </div>
         </section>
         
@@ -206,25 +214,25 @@
 
         <section id="achievements">
             <h2>Achievements</h2>
-        <div class="achievements-item">
-            <ul>
-                <li>BSBCRT301: Develop and extend critical and creative thinking skills - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>BSBXCS303: Securely manage personally identifiable information and workplace information - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>BSBXTW301: Work in a team - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>ICTICT313: Identify IP, ethics and privacy policies in ICT environments - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>ICTICT312: Use advanced features of applications - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>ICTPRG302: Apply introductory programming techniques - Ongoing</li>
-                <br>
-                <li>ICTWEB431: Create and style simple markup language documents - Grade: Pass/Satisfactory</li>
-                <br>
-                <li>ICTICT309: Create ICT user documentation - Ongoing</li>
-            </ul>
-        </div>
+            <div class="achievements-item">
+                <ul>
+                    <li>BSBCRT301: Develop and extend critical and creative thinking skills - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>BSBXCS303: Securely manage personally identifiable information and workplace information - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>BSBXTW301: Work in a team - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>ICTICT313: Identify IP, ethics and privacy policies in ICT environments - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>ICTICT312: Use advanced features of applications - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>ICTPRG302: Apply introductory programming techniques - Ongoing</li>
+                    <br>
+                    <li>ICTWEB431: Create and style simple markup language documents - Grade: Pass/Satisfactory</li>
+                    <br>
+                    <li>ICTICT309: Create ICT user documentation - Ongoing</li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact">
