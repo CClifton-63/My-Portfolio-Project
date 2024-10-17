@@ -92,30 +92,27 @@
             margin-bottom: 2rem;
         }
 
-        /* Add these CSS rules to your existing style section */
+        h2 {
+            font-size: 2em;
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
 
-h2 {
-    font-size: 2em;  /* Standardized size for all h2 headings */
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
+        h3 {
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
 
-h3 {
-    font-size: 1.5em;  /* Standardized size for all h3 headings */
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-/* Update the achievements heading specifically to maintain icon alignment */
-#achievements h2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 20px;
-    font-size: 2em;  /* Match other h2 headings */
-}
+        #achievements h2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+            font-size: 2em;
+        }
 
         footer {
             background-color: rgba(0, 70, 100, 0.8);
@@ -139,81 +136,216 @@ h3 {
             margin: 0;
             padding: 0;
         }
-        
+
         #achievements {
-    padding: 20px;
-    margin: 20px 0;
-}
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        #achievements h2 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+            font-size: 2.5em;
+        }
+
+        /* Update these specific CSS rules in your style section */
 
 #achievements h2 {
     display: flex;
-    align-items: center;  /* Vertically centers the icon with text */
+    align-items: center;
     margin-bottom: 20px;
-    gap: 20px;  /* Increased space between icon and text for larger icon */
-    font-size: 2.5em;  /* Increased text size to balance with larger icon */
+    gap: 20px;
 }
 
-#achievements .icon {
-    width: 150px;  /* Set to your specified size */
+#achievements h2 img.icon {
+    width: 150px;
     height: 150px;
-    object-fit: contain;  /* Ensures icon maintains aspect ratio */
+    vertical-align: middle;
+    object-fit: contain;
 }
 
-.achievements-item ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+/* Update Media Queries */
+@media screen and (max-width: 1024px) {
+    #achievements h2 img.icon {
+        width: 120px;
+        height: 120px;
+    }
 }
 
-.achievements-item li {
-    padding: 10px 0;
-    line-height: 1.5;
-    border-bottom: 1px solid #eee;
+@media screen and (max-width: 768px) {
+    #achievements h2 img.icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    #achievements h2 {
+        gap: 15px;
+    }
 }
 
-.achievements-item li:last-child {
-    border-bottom: none;
+@media screen and (max-width: 480px) {
+    #achievements h2 img.icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #achievements h2 {
+        gap: 10px;
+    }
 }
 
-.achievements-item li + li {
-    margin-top: 10px;
+@media screen and (max-width: 360px) {
+    #achievements h2 img.icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #achievements h2 {
+        gap: 8px;
+    }
 }
+
+        .achievements-item ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .achievements-item li {
+            padding: 10px 0;
+            line-height: 1.5;
+            border-bottom: 1px solid #eee;
+        }
+
+        .achievements-item li:last-child {
+            border-bottom: none;
+        }
+
+        .achievements-item li + li {
+            margin-top: 10px;
+        }
 
         .icon {
-    width: 150px; /* Adjust the size as needed */
-    height: 150;
-    vertical-align: middle;
-    margin-right: 8px; /* Adjust the spacing as needed */
-    
+            width: 150px;
+            height: 150px;
+            vertical-align: middle;
+            margin-right: 8px;
         }
 
         .linkedin-link {
-        color: cyan; /* Keep text color */
-        display: flex; /* Use flexbox for alignment */
-        align-items: center; /* Center align items vertically */
-
+            color: cyan;
+            display: flex;
+            align-items: center;
         }
 
-    .linkedin-icon {
-        width: 150px; /* Set a larger icon size */
-        height: 150px; /* Maintain aspect ratio */
-        margin-right: 10px; /* Space between icon and text */
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
         .linkedin-icon {
-            width: 40px; /* Smaller icon for medium screens */
-            height: 40px;
+            width: 150px;
+            height: 150px;
+            margin-right: 10px;
         }
-    }
 
-    @media (max-width: 480px) {
-        .linkedin-icon {
-            width: 35px; /* Even smaller icon for small screens */
-            height: 35px;
+        /* Adding Responsive Design Media Queries */
+        @media screen and (max-width: 1024px) {
+            main {
+                width: 90%;
+                margin: 4rem auto;
+            }
         }
-    }
+
+        @media screen and (max-width: 768px) {
+            main {
+                width: 95%;
+                margin: 3rem auto;
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav ul li {
+                flex: 1 1 auto;
+            }
+
+            .icon, .linkedin-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            #achievements h2 {
+                font-size: 2em;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            main {
+                width: 100%;
+                margin: 2rem auto;
+                padding: 1rem;
+                border-radius: 0;
+            }
+
+            nav ul li a {
+                padding: 0.8rem;
+                font-size: 0.9em;
+            }
+
+            .icon, .linkedin-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .achievements-item li {
+                font-size: 0.9em;
+            }
+
+            footer {
+                height: auto;
+                padding: 0.5rem;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            nav ul li a {
+                padding: 0.6rem;
+                font-size: 0.8em;
+            }
+
+            .icon, .linkedin-icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -312,7 +444,7 @@ h3 {
         </section>
 
         <section id="achievements">
-            <h2><img src="Media\Images\free-cup-trophy-icon.png" alt="Achievements Icon" class="icon"> Achievements</h2>
+            <h2><img src="Media/Images/free-cup-trophy-icon.png" alt="Achievements Icon" class="icon"> Achievements</h2>
             <div class="achievements-item">
                 <ul>
                     <li>BSBCRT301: Develop and extend critical and creative thinking skills - Grade: Pass/Satisfactory</li>
@@ -326,24 +458,18 @@ h3 {
                 </ul>
             </div>
         </section>
-        
 
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-item">
                 <a href="https://www.linkedin.com/in/chadc1137/" target="_blank" class="linkedin-link">
-                    <img src="Media\Images\LinkedIn Icon.png" alt="LinkedIn Icon" class="linkedin-icon">
+                    <img src="Media/Images/LinkedIn Icon.png" alt="LinkedIn Icon" class="linkedin-icon">
                     Connect with me on LinkedIn.
                 </a>
                 <br>
             </div>
         </section>
-        
-
     </main>
 
     <footer>
-        <p>My Portfolio - Property of Chad Clifton - Copyright © 2024 - Source of background img: <a href="https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg" target="_blank" style="color: rgb(253, 255, 255);">Here</a>.</p>
-    </footer>
-</body>
-</html>
+        <p>My Portfolio - Property of Chad Clifton - Copyright © 2024 - Source of background img: <a href="https://img.goodfon.com/original/2560x1440/0/39/hi
