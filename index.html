@@ -83,6 +83,27 @@
             color: #ffffff;
         }
 
+        /* Profile image styles */
+        .profile-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.02);
+        }
+
         main {
             flex: 1;
             padding: 1rem;
@@ -166,7 +187,6 @@
             text-decoration: none;
         }
 
-        /* Media Queries */
         @media screen and (max-width: 600px) {
             nav ul {
                 flex-direction: horizontal;
@@ -181,6 +201,11 @@
                 margin: 0.5rem auto;
                 width: 98%;
                 padding: 0.8rem;
+            }
+
+            .profile-container {
+                max-width: 250px;
+                padding: 0.5rem;
             }
 
             h2 {
@@ -210,6 +235,10 @@
                 padding: 0.5rem;
             }
 
+            .profile-container {
+                max-width: 200px;
+            }
+
             h2 {
                 font-size: 1.3rem;
             }
@@ -220,7 +249,7 @@
             }
         }
     </style>
-    </head>
+</head>
 <body>
     <header>
         <div class="logo-container">
@@ -297,6 +326,10 @@
     </nav>
 
     <main>
+        <div class="profile-container">
+            <img src="Media\Images\AiGenLinkedInDP1.png" alt="Chad Clifton" class="profile-image">
+        </div>
+
         <section id="about">
             <h2><img src="Media/Images/about-icon.png" alt="About Icon" class="icon"> About</h2>
             <div>
@@ -328,9 +361,8 @@
                     <li>ICTPRG302: Apply introductory programming techniques - Grade: Pass/Satisfactory</li>
                     <li>ICTWEB431: Create and style simple markup language documents - Grade: Pass/Satisfactory</li>
                     <li>ICTICT309: Create ICT user documentation - Ongoing</li>
-                    <li>ICTCLD301: Evaluate characteristics of cloud computing solutions and services (ICT30120) - Ongoing
+                    <li>ICTCLD301: Evaluate characteristics of cloud computing solutions and services (ICT30120) - Ongoing</li>
                     <li>ICTSAS305: Provide ICT advice to clients - Ongoing</li>
-                    </li>
                 </ul>
             </div>
         </section>
@@ -350,5 +382,5 @@
     <footer>
         <p>My Portfolio - Property of Chad Clifton - Copyright © 2024 - Source of background img: <a href="https://img.goodfon.com/original/2560x1440/0/39/hi-tech-tehnologii-network.jpg">Here</a></p>
     </footer>
-     </body>
+</body>
 </html>
